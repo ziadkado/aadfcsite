@@ -48,6 +48,27 @@ Google Fonts with system fallbacks.
 with the wordmark in white, for use on dark backgrounds (it is what the footer
 uses). To replace the logo, swap those two files keeping the same filenames.
 
+## The map
+
+`assets/img/st-albert.svg` is the City of St. Albert boundary, traced from the
+city's own outline drawing into a single vector path (viewBox `0 0 1000 987.5`).
+It is the site's structural signature and appears in four places:
+
+- **The hero** draws the boundary on load as a gradient stroke, with four
+  nested contour rings scaled about the shape's area centroid (470.4, 448.6)
+  and the club logo at its heart.
+- **"Rooted here"** on the homepage fills the same path with a brand gradient
+  and overlays white contour rings, like a topographic map.
+- **Page heads** on inner pages carry it as a 6%-opacity watermark, bleeding
+  off the right edge.
+- **The footer** carries it inverted in the bottom-right corner.
+
+The contour rings are `<use>` copies of one path definition transformed as
+`translate(cx cy) scale(s) translate(-cx -cy)`, so the outline is defined once
+per page. The draw-on animation uses the measured boundary length (3614 user
+units) as its `stroke-dasharray`, and resolves to `stroke-dashoffset: 0` at
+rest so the map is complete when animation is unavailable or reduced.
+
 ## Editing content
 
 Everything is in the HTML — open the file, find the text, change it. A few
