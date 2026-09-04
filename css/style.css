@@ -739,12 +739,12 @@ strong { font-weight: 650; }
 
 /* Contour rings: scaled copies of the same boundary, nested about its centroid. */
 .contour { fill: none; stroke-width: 3; opacity: 0; animation: contour-in .9s var(--ease) forwards; }
-.contour--1 { stroke: var(--plum); animation-delay: .05s; }
-.contour--2 { stroke: var(--navy); animation-delay: .15s; }
-.contour--3 { stroke: var(--red);  animation-delay: .25s; }
-.contour--4 { stroke: var(--gold); animation-delay: .35s; }
-.contour--5 { stroke: var(--plum); animation-delay: .45s; }
-.contour--6 { stroke: var(--navy); animation-delay: .55s; }
+.contour--1 { stroke: var(--plum); animation-delay: 0.0s; }
+.contour--2 { stroke: var(--navy); animation-delay: 0.06s; }
+.contour--3 { stroke: var(--red);  animation-delay: 0.12s; }
+.contour--4 { stroke: var(--gold); animation-delay: 0.18s; }
+.contour--5 { stroke: var(--plum); animation-delay: 0.24s; }
+.contour--6 { stroke: var(--navy); animation-delay: 0.3s; }
 @keyframes contour-in { to { opacity: .42; } }
 
 .map-outline {
@@ -754,7 +754,7 @@ strong { font-weight: 650; }
   stroke-linejoin: round;
   stroke-dasharray: 3614;
   stroke-dashoffset: 0;            /* drawn at rest; the animation runs from */
-  animation: map-draw 2.4s var(--ease) both;
+  animation: map-draw 1.9s var(--ease) both;
 }
 @keyframes map-draw { from { stroke-dashoffset: 3614; } }
 
@@ -765,12 +765,14 @@ strong { font-weight: 650; }
   left: 47.0%;
   top: 45.4%;
   width: 36%;
-  transform: translate(-50%, -50%) scale(.86);
-  opacity: 0;
+  transform: translate(-50%, -50%);
   filter: drop-shadow(0 14px 26px rgba(35, 31, 32, .18));
-  animation: logo-in .8s var(--ease) 1.5s forwards;
+  animation: logo-in 1s var(--ease) both;
 }
-@keyframes logo-in { to { opacity: 1; transform: translate(-50%, -50%) scale(1); } }
+@keyframes logo-in {
+  from { transform: translate(-50%, -50%) scale(.9); }
+  to   { transform: translate(-50%, -50%) scale(1); }
+}
 
 @media (prefers-reduced-motion: reduce) {
   .contour, .map-outline, .hero-map__logo { animation: none; opacity: 1; }
