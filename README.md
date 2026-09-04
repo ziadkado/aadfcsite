@@ -40,9 +40,11 @@ Colours are sampled directly from the club logo:
 | `--navy` | `#213F7D` | Dark accents |
 | `--ink` | `#231F20` | Body text, footer |
 
-Type is [Fraunces](https://fonts.google.com/specimen/Fraunces) for headings and
-[Inter](https://fonts.google.com/specimen/Inter) for body copy, loaded from
-Google Fonts with system fallbacks.
+Type is [Manrope](https://fonts.google.com/specimen/Manrope) throughout, loaded
+as a variable font (weights 200-800) from Google Fonts with a system-sans
+fallback. Hierarchy comes from weight and tracking rather than a second family:
+headings sit at 800 with -0.032em tracking, smaller headings at 700, body copy
+at 400, and uppercase labels at 700 with +0.16em.
 
 `assets/img/logo.png` is the full-colour logo; `logo-light.png` is the same mark
 with the wordmark in white, for use on dark backgrounds (it is what the footer
