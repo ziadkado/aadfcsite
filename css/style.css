@@ -684,10 +684,10 @@ strong { font-weight: 650; }
 .footer-bottom a:hover { color: var(--gold); }
 
 /* ------------------------------------------------------------- reveal --- */
-.reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s var(--ease), transform .6s var(--ease); }
-.reveal.is-in { opacity: 1; transform: none; }
+.js .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s var(--ease), transform .6s var(--ease); }
+.js .reveal.is-in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
-  .reveal { opacity: 1; transform: none; transition: none; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
   .btn:hover, .card:hover, .event:hover, .person:hover { transform: none; }
 }
 
